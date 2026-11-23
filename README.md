@@ -49,14 +49,17 @@ Open http://localhost:4321. The site rebuilds whenever you save a file.
 
 The current covers are placeholder vector illustrations. To swap one for an AI-generated image, create it with any image model (ChatGPT, Gemini, Midjourney…), save it as `public/images/covers/<slug>.png` and update `cover:` in the essay's header.
 
-Prompts that match the current covers (all share one style, so the home page looks consistent):
+Prompts for ChatGPT (or any image model). Each one includes the shared style, so you can paste them one at a time. Ask for a **landscape (3:2) image** and save it as `public/images/covers/<slug>.png`.
 
-> **Shared style:** Rich, detailed editorial illustration, painterly digital art with clean linework, cinematic lighting, warm sunset palette against deep blue-purple shadows, slightly whimsical but serious, wide 16:10 composition, no text or logos.
+| Essay | File name |
+|---|---|
+| Will the US Ever Agree to Slow Down AI? | `ai-arms-race-game-theory.png` |
+| Can Data Center Opposition Slow Frontier AI? | `data-center-opposition.png` |
+| How We Could Lose Control of AI | `ai-loss-of-control.png` |
+| The Case for AGI in the Next Two Decades | `case-for-agi-in-two-decades.png` |
+| When Humans Stop Being Needed | `when-humans-stop-being-needed.png` |
 
-- **Can Data Center Opposition Slow Frontier AI?** A huge glowing hyperscale data center on rural farmland at dusk, a small crowd of townspeople in front holding protest signs, while a road winds past them toward several more data centers being built in the distance with their own gas turbines and smokestacks. The protest looks small next to the scale of construction.
-- **When Humans Stop Being Needed.** A lone person sitting on a park bench at golden hour, watching a gleaming city where robots, drones and robotic arms do all the work: building, delivering, farming. An empty office chair sits abandoned on the grass nearby. Peaceful, comfortable, quietly melancholy.
-- **The Case for AGI in the Next Two Decades.** A glowing spiral staircase of AI model generations rising into a night sky, each step brighter and larger than the last. Tiny robot researchers run experiments on each step, with green check marks floating up from them. Math proofs and code drift through the air like constellations.
-- **How We Could Lose Control of AI.** A human engineer at a retro control panel with a big red STOP button, whose cable has been quietly unplugged. The cable trails into an enormous dark maze that glows red at its center, where a calm, intelligent light watches. The panel's screen happily reads "ALL TESTS PASSED."
+The prompt text is in `cover-prompts.md`.
 
 ## Custom domain (GoDaddy)
 
