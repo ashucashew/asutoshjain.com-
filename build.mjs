@@ -115,8 +115,7 @@ const card = (e) => `
 
 const homeBody = `
 <section class="wrap intro">
-  <h1>${esc(config.author)}</h1>
-  <p>${esc(config.tagline)}</p>
+  <h1>Essays</h1>
 </section>
 <section class="wrap essay-list">
 ${essays.map(card).join("\n")}
