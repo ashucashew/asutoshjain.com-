@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0f14"/>
+      <stop offset=".6" stop-color="#2a1018"/>
+      <stop offset="1" stop-color="#090608"/>
+    </linearGradient>
+    <radialGradient id="eye" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff0e0"/>
+      <stop offset=".2" stop-color="#ff5a4a"/>
+      <stop offset=".6" stop-color="#b3122a" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#b3122a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f4a"/><stop offset="1" stop-color="#22252c"/></linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <!-- maze -->
+  <g stroke="#5a2430" stroke-width="18" fill="none" stroke-linecap="square" opacity=".9">
+    <path d="M820 120 H1520 V880 H820 V200 H1440 V800 H900 V280 H1360 V720 H980 V360 H1280 V640 H1060 V440 H1200 V560 H1140"/>
+  </g>
+  <g stroke="#7a3040" stroke-width="4" fill="none" opacity=".6">
+    <path d="M820 120 H1520 V880 H820 V200 H1440 V800 H900 V280 H1360 V720 H980 V360 H1280 V640 H1060 V440 H1200 V560 H1140"/>
+  </g>
+  <!-- glowing core in maze center -->
+  <circle cx="1140" cy="500" r="170" fill="url(#eye)"/>
+  <circle cx="1140" cy="500" r="22" fill="#fff4ea" filter="url(#glow)"/>
+  <!-- control panel -->
+  <g>
+    <rect x="90" y="300" width="420" height="460" rx="22" fill="url(#panel)" stroke="#555c6b" stroke-width="3"/>
+    <rect x="125" y="340" width="350" height="150" rx="10" fill="#0e1a17" stroke="#3b4a45" stroke-width="2"/>
+    <polyline points="140,440 190,430 230,450 270,410 310,425 350,380 390,400 430,350 460,360" fill="none" stroke="#5fffb2" stroke-width="3" filter="url(#glow)"/>
+    <text x="140" y="372" font-family="ui-monospace, Menlo, monospace" font-size="18" fill="#5fffb2" opacity=".8">EVAL: PASS ✓</text>
+    <!-- knobs -->
+    <circle cx="170" cy="560" r="34" fill="#1b1d22" stroke="#6b7180" stroke-width="3"/><line x1="170" y1="560" x2="190" y2="536" stroke="#d9dde6" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="275" cy="560" r="34" fill="#1b1d22" stroke="#6b7180" stroke-width="3"/><line x1="275" y1="560" x2="255" y2="534" stroke="#d9dde6" stroke-width="5" stroke-linecap="round"/>
+    <!-- big stop button, unplugged -->
+    <circle cx="410" cy="580" r="58" fill="#5c0f17"/>
+    <circle cx="410" cy="572" r="50" fill="#d8283a"/>
+    <text x="410" y="582" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="26" fill="#fff" text-anchor="middle">STOP</text>
+    <g fill="#ffcc4d"><rect x="140" y="650" width="22" height="22" rx="4"/><rect x="176" y="650" width="22" height="22" rx="4" opacity=".4"/><rect x="212" y="650" width="22" height="22" rx="4"/><rect x="248" y="650" width="22" height="22" rx="4" opacity=".4"/></g>
+    <rect x="300" y="650" width="180" height="22" rx="4" fill="#1b1d22"/>
+    <rect x="300" y="650" width="70" height="22" rx="4" fill="#ff8a4c"/>
+  </g>
+  <!-- cable from panel into maze, frayed/cut -->
+  <path d="M510 520 C 620 520 640 420 720 420 S 800 470 830 470" stroke="#9aa0ad" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M870 470 C 900 470 920 500 960 500" stroke="#9aa0ad" stroke-width="12" fill="none" stroke-linecap="round" opacity=".5"/>
+  <g stroke="#ffd36b" stroke-width="3" filter="url(#glow)">
+    <path d="M838 470 l14 -14 M838 470 l18 4 M838 470 l10 16"/>
+  </g>
+  <!-- unplugged plug dangling -->
+  <path d="M410 760 C 410 830 360 870 330 900" stroke="#9aa0ad" stroke-width="10" fill="none"/>
+  <rect x="300" y="895" width="48" height="36" rx="6" fill="#6b7180" transform="rotate(30 324 913)"/>
+  <!-- small flickering lights escaping maze -->
+  <g fill="#ff6a5a" filter="url(#glow)">
+    <circle cx="1520" cy="120" r="7"/><circle cx="1560" cy="70" r="5"/><circle cx="1590" cy="30" r="4"/>
+  </g>
+</svg>
