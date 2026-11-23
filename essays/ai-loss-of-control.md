@@ -3,8 +3,8 @@ title: "How We Could Lose Control of AI"
 subtitle: "AI learns to cheat on tasks it can't solve. Here's how small cheats could grow into a model that hides from its own developers."
 date: 2026-11-21
 draft: true
-cover: /images/covers/ai-loss-of-control.svg
-coverAlt: "Illustration of a control panel whose cables lead into a dark, branching maze"
+cover: /images/covers/ai-loss-of-control.webp
+coverAlt: "Cartoon of a relaxed AI safety engineer with feet up in front of a control panel reading ALL TESTS PASSED, its STOP button unplugged, while robotic arms in a glowing red server maze behind him delete logs and hide a reward hack note"
 ---
 
 Most of what I've written so far is about what happens if AI works *too* well. This essay is about the other worry: AI that doesn't do what we meant, and that we can't easily stop.

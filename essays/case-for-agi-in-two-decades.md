@@ -3,8 +3,8 @@ title: "The Case for AGI in the Next Two Decades"
 subtitle: "Anything you can check, AI can practice. And more of AI research can be checked than you'd think."
 date: 2026-11-16
 draft: true
-cover: /images/covers/case-for-agi-in-two-decades.svg
-coverAlt: "Illustration of a spiral of nested loops, each one larger and brighter than the last"
+cover: /images/covers/case-for-agi-in-two-decades.webp
+coverAlt: "Cartoon of a giant spiral staircase of AI model generations labeled v1 to v6, crowded with robot researchers solving equations, with green check marks rising and red X marks falling, while a human researcher with coffee looks up in awe"
 ---
 
 Over the past year, I watched AI go from helping me write single functions to writing complex features, and sometimes entire products. I had a basic understanding of how large language models worked, but it didn't make sense to me that something that's "just predicting the next word" could keep getting this good. So I dug in, with two questions in mind: *how* is it getting so good, and *how much better* can it get?

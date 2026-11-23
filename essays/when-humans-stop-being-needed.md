@@ -2,8 +2,8 @@
 title: "When Humans Stop Being Needed"
 subtitle: "The likelier AI danger isn't a robot uprising. It's AI getting good enough at work that people stop being needed."
 date: 2026-11-11
-cover: /images/covers/when-humans-stop-being-needed.svg
-coverAlt: "Illustration of a lone person on a bench watching automated machines work in the distance"
+cover: /images/covers/when-humans-stop-being-needed.webp
+coverAlt: "Cartoon of a person relaxing on a bench with a tablet showing a monthly AI dividend, overlooking a city run by robots and drones, with an abandoned office chair and briefcase in the grass and a retired horse grazing nearby"
 ---
 
 When most people picture AI going wrong, they think of a robot uprising. I think the more likely danger is a lot quieter: AI just gets good enough at work that people stop being *needed*. And being needed is basically where ordinary people's power has always come from.

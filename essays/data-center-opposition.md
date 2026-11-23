@@ -2,8 +2,8 @@
 title: "Can Data Center Opposition Slow Frontier AI?"
 subtitle: "Local backlash against data centers is surging. It is still an unreliable and poorly aimed AI safety lever."
 date: 2026-11-22
-cover: /images/covers/data-center-opposition.svg
-coverAlt: "Illustration of a data center campus surrounded by protest signs, with power lines routing around it"
+cover: /images/covers/data-center-opposition.webp
+coverAlt: "Cartoon of townspeople holding protest signs at an outdoor county meeting while a developer hands the council a giant community benefits check, with a huge data center and dozens more under construction stretching to the horizon"
 ---
 
 Prominent figures in the AI safety community favor slowing frontier AI development until safety and governance catch up.[^1] One way to do so runs through physical infrastructure. A main driver of frontier AI progress is compute (the training compute behind frontier models has grown roughly four- to fivefold a year),[^2] and that compute lives in data centers. Meanwhile, local opposition to data centers in the US has been surging: Data Center Watch counts at least 75 US projects, worth about $130 billion, blocked or delayed in the first quarter of 2026 alone.[^3] So if AI progress requires data centers, and data centers are getting harder to build, could riding this wave of opposition be a good way to pace the frontier?
