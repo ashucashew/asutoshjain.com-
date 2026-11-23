@@ -1,7 +1,7 @@
 ---
 title: "Will the US Ever Agree to Slow Down AI?"
 subtitle: "The game theory of the AI race, and why the realistic goal isn't a pause but guardrails."
-date: 2026-11-23
+date: 2026-11-13
 draft: true
 cover: /images/covers/ai-arms-race-game-theory.svg
 coverAlt: "Illustration of two players facing each other across a glowing four-square payoff grid"
