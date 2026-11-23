@@ -60,7 +60,7 @@ Prompts that match the current covers (all share one style, so the home page loo
 
 ## Custom domain (GoDaddy)
 
-1. Set `customDomain` in `site.config.json` (e.g. `"yourname.com"`) and push. This adds the `CNAME` file GitHub Pages needs.
+1. Set `customDomain` in `site.config.json` (currently `"asutoshjain.com"`). This adds the `CNAME` file GitHub Pages needs.
 2. In GoDaddy: **My Products → your domain → DNS**. Remove the existing `A` record for `@` (the "Parked" one) and add:
 
    | Type  | Name | Value                  |
@@ -69,6 +69,6 @@ Prompts that match the current covers (all share one style, so the home page loo
    | A     | @    | 185.199.109.153        |
    | A     | @    | 185.199.110.153        |
    | A     | @    | 185.199.111.153        |
-   | CNAME | www  | `<github-username>.github.io` |
+   | CNAME | www  | `ashucashew.github.io` |
 
 3. In the GitHub repo: **Settings → Pages**. Enter the domain under **Custom domain**, wait for the DNS check, then tick **Enforce HTTPS**.
