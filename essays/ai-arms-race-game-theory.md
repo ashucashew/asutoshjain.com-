@@ -3,8 +3,8 @@ title: "Will the US Ever Agree to Slow Down AI?"
 subtitle: "The game theory of the AI race, and why the realistic goal isn't a pause but guardrails."
 date: 2026-11-13
 draft: true
-cover: /images/covers/ai-arms-race-game-theory.svg
-coverAlt: "Illustration of two players facing each other across a glowing four-square payoff grid"
+cover: /images/covers/ai-arms-race-game-theory.webp
+coverAlt: "Cartoon of two rival players at a table, one in a navy suit and one in a red suit, each with a stack of computer-chip poker chips and an unpressed SLOW DOWN button, over a glowing prisoner's dilemma payoff grid"
 ---
 
 A lot of AI safety proposals end in the same place: an international agreement to slow down frontier AI, with the US and China both signing on. I've argued for versions of this myself. In [When Humans Stop Being Needed](/essays/when-humans-stop-being-needed/), I ended on the hope that rivals could limit AI the way the US and Soviet Union limited nuclear weapons.
