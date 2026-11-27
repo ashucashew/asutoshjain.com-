@@ -14,7 +14,7 @@ My personal essay site. Each essay is a Markdown file in `essays/`. Pushing to `
    date: 2026-12-01
    cover: /images/covers/my-essay-slug.png
    coverAlt: "Short description of the cover image"
-   draft: false      # true shows a "Draft" badge
+   draft: false      # true moves it to the Drafts section at the bottom of the home page
    hidden: false     # true keeps it off the site entirely
    ---
 

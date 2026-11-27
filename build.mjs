@@ -113,17 +113,49 @@ const card = (e) => `
     </a>
   </article>`;
 
+const published = essays.filter((e) => !e.draft);
+const drafts = essays.filter((e) => e.draft);
+
+// Drafts get a compact row: small thumbnail, no badge (the section heading already says it).
+const draftRow = (e) => `
+    <li>
+      <a class="draft-row" href="${e.url}">
+        <img src="${e.cover}" alt="" loading="lazy">
+        <div class="draft-body">
+          <h3>${esc(e.title)}</h3>
+          <p>${esc(e.subtitle || "")}</p>
+          <div class="meta"><time datetime="${new Date(e.date).toISOString().slice(0, 10)}">${fmtDate(e.date)}</time><span class="dot">·</span><span>${e.readMins} min read</span></div>
+        </div>
+      </a>
+    </li>`;
+
 const homeBody = `
 <section class="wrap intro">
   <h1>Essays</h1>
 </section>
 <section class="wrap essay-list">
-${essays.map(card).join("\n")}
-</section>`;
+${published.map(card).join("\n")}
+</section>
+${
+  drafts.length
+    ? `<section class="wrap drafts" aria-labelledby="drafts-heading">
+  <div class="drafts-head">
+    <h2 id="drafts-heading">Drafts</h2>
+    <p>Works in progress. Expect these to change.</p>
+  </div>
+  <ul class="draft-list">
+${drafts.map(draftRow).join("\n")}
+  </ul>
+</section>`
+    : ""
+}`;
 
-const essayBody = (e, i) => {
-  const newer = essays[i - 1];
-  const older = essays[i + 1];
+const essayBody = (e) => {
+  // Previous/next stay within the same group, so readers of a finished essay aren't sent into a draft.
+  const group = e.draft ? drafts : published;
+  const i = group.indexOf(e);
+  const newer = group[i - 1];
+  const older = group[i + 1];
   return `
 <article class="essay">
   <header class="wrap-narrow essay-header">
@@ -152,14 +184,14 @@ const write = (rel, content) => {
   fs.writeFileSync(p, content);
 };
 
-write("index.html", layout({ title: config.title, description: config.tagline, body: homeBody, image: essays[0]?.cover }));
+write("index.html", layout({ title: config.title, description: config.tagline, body: homeBody, image: (published[0] || essays[0])?.cover }));
 essays.forEach((e, i) =>
   write(
     `essays/${e.slug}/index.html`,
     layout({
       title: `${e.title} · ${config.title}`,
       description: e.subtitle || "",
-      body: essayBody(e, i),
+      body: essayBody(e),
       image: e.cover,
       pathname: e.url,
       type: "article",
@@ -179,7 +211,7 @@ write(
   `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
 <title>${esc(config.title)}</title><link>${siteUrl}/</link><description>${esc(config.tagline)}</description>
-${essays
+${published
   .map(
     (e) =>
       `<item><title>${esc(e.title)}</title><link>${siteUrl}${e.url}</link><guid>${siteUrl}${e.url}</guid><pubDate>${new Date(e.date).toUTCString()}</pubDate><description>${esc(e.subtitle || "")}</description></item>`
@@ -191,4 +223,4 @@ ${essays
 if (config.customDomain) write("CNAME", config.customDomain + "\n");
 write(".nojekyll", "");
 
-console.log(`Built ${essays.length} essays -> dist/`);
+console.log(`Built ${published.length} essays + ${drafts.length} drafts -> dist/`);
