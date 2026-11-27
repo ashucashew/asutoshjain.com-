@@ -34,6 +34,7 @@ My personal essay site. Each essay is a Markdown file in `essays/`. Pushing to `
     <figcaption>Caption</figcaption>
   </figure>
   ```
+- Substack: `npm run substack -- <slug>` writes `substack/<slug>.html`. Open it, click **Copy article** and paste into a new Substack post.
 - From Google Docs: **File → Download → Markdown (.md)** gives you a good starting point.
 
 ## Preview locally
